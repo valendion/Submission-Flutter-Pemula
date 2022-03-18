@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_pemula_project/style/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class FirstPage extends StatelessWidget {
   TextEditingController _controller = TextEditingController();
+
+  FirstPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class FirstPage extends StatelessWidget {
                 ),
                 color: blueVeryDarkColor,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
@@ -61,7 +62,7 @@ class FirstPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: 'Enter your name',
                           labelStyle: textDesc3,
-                          border: OutlineInputBorder(),
+                          border: const OutlineInputBorder(),
                         ),
                       ),
                     ),
@@ -71,13 +72,13 @@ class FirstPage extends StatelessWidget {
                     ),
                     Container(
                       margin: EdgeInsets.all(16),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         left: 16,
                         right: 4,
                       ),
                       decoration: BoxDecoration(
                           color: bluePrimaryColor,
-                          borderRadius: BorderRadius.all(Radius.circular(40))),
+                          borderRadius: BorderRadius.all(const Radius.circular(40))),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -85,7 +86,7 @@ class FirstPage extends StatelessWidget {
                             'Get Started',
                             style: textButton,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 8,
                           ),
                           IconButton(
