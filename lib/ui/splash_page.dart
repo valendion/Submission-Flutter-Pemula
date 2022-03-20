@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(const Duration(seconds: 3), (){
 
       Route route = MaterialPageRoute(builder: (context) => FirstPage());
-      Navigator.pushReplacement(context, route);
+      Navigator.pushAndRemoveUntil(context, route, (route) => false);
 
     });
     super.initState();
