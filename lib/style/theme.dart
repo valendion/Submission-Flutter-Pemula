@@ -40,3 +40,7 @@ TextStyle textButton = TextStyle(
     fontSize: 14, color: whitePrimaryColor, fontWeight: FontWeight.w400
 );
 
+TextStyle textTitleWhite = TextStyle(
+    fontSize: 18, color: whitePrimaryColor, fontWeight: FontWeight.w400
+);
+

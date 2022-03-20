@@ -40,7 +40,7 @@ class CardMyAppointment extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(height: 8,),
+                const SizedBox(height: 8,),
 
                 Card(
                   color: bluePrimaryColor,
@@ -52,7 +52,7 @@ class CardMyAppointment extends StatelessWidget {
                           children: [
                             const Icon(Icons.access_alarm, color: Colors.white,),
                             Text(
-                              'August 27 at 10 AM - 12.30 PM',
+                              'Wednesday, 07:00 - 09:00 WIT',
                               style: textButton,),
                           ],
                         ),
@@ -60,7 +60,7 @@ class CardMyAppointment extends StatelessWidget {
                           children: [
                             const Icon(Icons.location_on_outlined, color: Colors.white,),
                             Text(
-                              'August 27 at 10 AM - 12.30 PM',
+                              'PUSKESMAS Lapadde Kota Parepare',
                               style: textButton,),
                           ],
                         )

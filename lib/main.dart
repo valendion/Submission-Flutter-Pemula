@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pemula_project/ui/home_page.dart';
-import 'package:flutter_pemula_project/ui/tes_layout.dart';
+import 'package:flutter_pemula_project/ui/splash_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: HomePage(name: 'Valendion',)
+      home: const SplashPage()
     );
   }
 }

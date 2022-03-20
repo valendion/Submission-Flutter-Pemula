@@ -95,14 +95,16 @@ class _HomePageState extends State<HomePage> {
                   height: 20,
                 ),
                 SizedBox(
+                  //
+                  //
                   // Ada cara lain biar tinggi Listview bisa mengikuti tinggi item kak ?
-                  height: MediaQuery.of(context).size.height / 4,
+                  height: MediaQuery.of(context).size.height / 3.5,
+                  //
+                  //
+                  //
                   child: ListView.builder(
                     itemBuilder: (context, index) {
-                      return CardDoctor(
-                          name: nameDoctor[index],
-                          doctor: imageDoctor[index],
-                          specialist: specialistDoctor[index]);
+                      return CardDoctor(index: index,);
                     },
                     itemCount: imageDoctor.length,
                     // shrinkWrap: true,
@@ -126,10 +128,8 @@ class _HomePageState extends State<HomePage> {
                   height: 20,
                 ),
 
-                CardMyAppointment()
+                const CardMyAppointment()
               ],
-
-
             ),
           ),
         ),

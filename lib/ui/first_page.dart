@@ -1,12 +1,27 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pemula_project/style/theme.dart';
+import 'package:flutter_pemula_project/ui/home_page.dart';
+import 'package:flutter_pemula_project/utils/validation_name.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class FirstPage extends StatelessWidget {
-  TextEditingController _controller = TextEditingController();
+class FirstPage extends StatefulWidget {
 
   FirstPage({Key? key}) : super(key: key);
+
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  final TextEditingController _controller = TextEditingController();
+
+  var _text = '';
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +74,12 @@ class FirstPage extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.all(16),
                       child: TextFormField(
+                        controller: _controller,
+                        onChanged: (text) => setState(() {
+                          _text;
+                        }),
                         decoration: InputDecoration(
+                          errorText: getErrorName(_controller.text),
                           labelText: 'Enter your name',
                           labelStyle: textDesc3,
                           border: const OutlineInputBorder(),
@@ -74,7 +94,7 @@ class FirstPage extends StatelessWidget {
                       margin: EdgeInsets.all(16),
                       padding: const EdgeInsets.only(
                         left: 16,
-                        right: 4,
+                        right: 2,
                       ),
                       decoration: BoxDecoration(
                           color: bluePrimaryColor,
@@ -91,7 +111,11 @@ class FirstPage extends StatelessWidget {
                           ),
                           IconButton(
                             onPressed: () {
-
+                              if(getErrorName(_controller.text) == null){
+                                Navigator.push(context, MaterialPageRoute(builder: (context){
+                                  return HomePage(name: _controller.text);
+                                }));
+                              }
                             },
                             icon: const Icon(Icons.arrow_forward_outlined),
                             color: whitePrimaryColor,
@@ -108,5 +132,7 @@ class FirstPage extends StatelessWidget {
         ),
       ),
     );
+
+
   }
 }
