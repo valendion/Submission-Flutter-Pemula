@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pemula_project/style/theme.dart';
 
 class CardMyAppointment extends StatelessWidget {
-  const CardMyAppointment({Key? key}) : super(key: key);
+  const CardMyAppointment({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {

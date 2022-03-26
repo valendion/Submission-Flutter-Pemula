@@ -5,16 +5,11 @@ import 'package:flutter_pemula_project/widget/card_myappoinment.dart';
 
 import '../widget/card_doctor.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   final String name;
 
-  const HomePage({Key? key, required this.name}) : super(key: key);
+  const HomePage({Key key,  this.name}) : super(key: key);
 
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                           style: textDesc2,
                         ),
                         Text(
-                          widget.name,
+                          name,
                           style: textTitleBlue,
                         )
                       ],
@@ -54,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         const CircleAvatar(
                           backgroundImage:
-                              AssetImage('assets/images/profile.jpeg'),
+                          AssetImage('assets/images/profile.jpeg'),
                         )
                       ],
                     ),

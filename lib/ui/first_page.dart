@@ -5,8 +5,8 @@ import 'package:flutter_pemula_project/utils/validation_name.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class FirstPage extends StatefulWidget {
+  const FirstPage({Key key}) : super(key: key);
 
-  FirstPage({Key? key}) : super(key: key);
 
   @override
   State<FirstPage> createState() => _FirstPageState();
@@ -15,7 +15,7 @@ class FirstPage extends StatefulWidget {
 class _FirstPageState extends State<FirstPage> {
   final TextEditingController _controller = TextEditingController();
 
-  var _text = '';
+  final _text = '';
 
   @override
   void dispose() {
@@ -60,7 +60,7 @@ class _FirstPageState extends State<FirstPage> {
                       'Enjoy your health anywhere',
                       style: textTItleDark,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Text(
@@ -72,7 +72,7 @@ class _FirstPageState extends State<FirstPage> {
                       height: 20,
                     ),
                     Container(
-                      margin: EdgeInsets.all(16),
+                      margin: const EdgeInsets.all(16),
                       child: TextFormField(
                         controller: _controller,
                         onChanged: (text) => setState(() {
@@ -91,14 +91,14 @@ class _FirstPageState extends State<FirstPage> {
                       height: 40,
                     ),
                     Container(
-                      margin: EdgeInsets.all(16),
+                      margin: const EdgeInsets.all(16),
                       padding: const EdgeInsets.only(
                         left: 16,
                         right: 2,
                       ),
                       decoration: BoxDecoration(
                           color: bluePrimaryColor,
-                          borderRadius: BorderRadius.all(const Radius.circular(40))),
+                          borderRadius: const BorderRadius.all(Radius.circular(40))),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [

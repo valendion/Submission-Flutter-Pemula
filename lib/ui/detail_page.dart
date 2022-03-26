@@ -2,19 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pemula_project/model/data_docter.dart';
 import 'package:flutter_pemula_project/style/theme.dart';
 
-class DetailPage extends StatefulWidget {
+class DetailPage extends StatelessWidget {
   final int index;
 
-  const DetailPage({
-    Key? key,
-    required this.index,
+  const DetailPage({Key key,
+    this.index,
   }) : super(key: key);
 
-  @override
-  _DetailPageState createState() => _DetailPageState();
-}
-
-class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,21 +19,21 @@ class _DetailPageState extends State<DetailPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-              backgroundImage: AssetImage(imageDoctor[widget.index]),
+              backgroundImage: AssetImage(imageDoctor[index]),
               radius: 48, // Image radius
             ),
             const SizedBox(
               height: 16,
             ),
             Text(
-              nameDoctor[widget.index],
+              nameDoctor[index],
               style: textTitleWhite,
             ),
             const SizedBox(
               height: 4,
             ),
             Text(
-              specialistDoctor[widget.index],
+              specialistDoctor[index],
               style: textButton,
             ),
             const SizedBox(
@@ -64,7 +58,7 @@ class _DetailPageState extends State<DetailPage> {
                     height: 8,
                   ),
                   Text(
-                    biography[widget.index],
+                    biography[index],
                     style: textDesc2,
                   ),
                   const SizedBox(
@@ -90,11 +84,11 @@ class _DetailPageState extends State<DetailPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            location[widget.index],
+                            location[index],
                             style: textTItle,
                           ),
                           Text(
-                            time[widget.index],
+                            time[index],
                             style: textDesc2,
                           ),
                         ],

@@ -1,7 +1,6 @@
 
-import 'package:flutter/cupertino.dart';
 
-String? getErrorName(String name){
+String getErrorName(String name){
   if(name.isEmpty){
     return 'Can\'t be empsty';
   }

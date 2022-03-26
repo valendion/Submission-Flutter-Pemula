@@ -4,7 +4,7 @@ import 'package:flutter_pemula_project/ui/first_page.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+  const SplashPage({Key key}) : super(key: key);
 
   @override
   State<SplashPage> createState() => _SplashPageState();
